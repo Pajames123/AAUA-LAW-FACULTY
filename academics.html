@@ -34,10 +34,15 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="academics.html">Academics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="student-life.html">Students (LSS)</a></li>
-                    <li class="nav-item"><a class="nav-link" href="law-clinic.html">Law Clinic</a></li>
+                    <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li> <li class="nav-item"><a class="nav-link" href="law-clinic.html">Law Clinic</a></li>
                     <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
                     <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-2" href="https://avers.aaua.edu.ng" target="_blank">Portal Login</a></li>
+                    
+                    <li class="nav-item theme-toggle-wrapper">
+                        <button class="theme-btn" id="themeToggle" title="Toggle Dark Mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -53,6 +58,7 @@
     <div class="bg-light py-3 border-bottom sticky-top" style="top: 70px; z-index: 900;">
         <div class="container d-flex justify-content-center flex-wrap gap-3">
             <a href="#calendar" class="btn btn-outline-dark btn-sm rounded-pill">Academic Calendar</a>
+            <a href="#curriculum" class="btn btn-outline-dark btn-sm rounded-pill">Curriculum</a>
             <a href="#staff" class="btn btn-outline-dark btn-sm rounded-pill">Staff Directory</a>
             <a href="#material-bank" class="btn btn-primary btn-sm rounded-pill shadow-sm">Material Bank (Downloads)</a>
         </div>
@@ -70,11 +76,7 @@
             <div class="table-responsive">
                 <table class="table table-striped table-hover border">
                     <thead class="table-dark">
-                        <tr>
-                            <th>Date / Week</th>
-                            <th>Event Activity</th>
-                            <th>Target Audience</th>
-                        </tr>
+                        <tr><th>Date / Week</th><th>Event Activity</th><th>Target Audience</th></tr>
                     </thead>
                     <tbody>
                         <tr><td>Nov 9 – 15, 2025</td><td>Online Screening & Registration</td><td>Fresh & Returning Students</td></tr>
@@ -94,6 +96,144 @@
 
         <hr class="my-5">
 
+        <section id="curriculum" class="mb-5">
+            <h2 class="section-title">Approved Course Curriculum</h2>
+            <p class="text-muted mb-4">Click on your level to view the required courses. <br><small><strong>Key:</strong> C = Core (Compulsory), E = Elective</small></p>
+            
+            <div class="accordion shadow-sm" id="curriculumAccordion">
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#lvl100">
+                            <strong>100 Level / Direct Entry</strong>
+                        </button>
+                    </h2>
+                    <div id="lvl100" class="accordion-collapse collapse show" data-bs-parent="#curriculumAccordion">
+                        <div class="accordion-body">
+                            <table class="table table-hover table-striped table-sm border">
+                                <thead class="table-dark">
+                                    <tr><th>Code</th><th>Course Title</th><th>Unit</th><th>Status</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>JIL 101</td><td>Legal Method I</td><td>2</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>AAUA-Law 101</td><td>Legal Writing</td><td>4</td><td><span class="badge bg-success">C</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lvl200">
+                            <strong>200 Level</strong>
+                        </button>
+                    </h2>
+                    <div id="lvl200" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
+                        <div class="accordion-body">
+                            <table class="table table-hover table-striped table-sm border">
+                                <thead class="table-dark">
+                                    <tr><th>Code</th><th>Course Title</th><th>Unit</th><th>Status</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>PUL 201</td><td>Constitutional Law I</td><td>4</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>JIL 203</td><td>Nigerian Legal System I</td><td>4</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>CCL 201</td><td>Law of Contract I</td><td>4</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>PUL 203</td><td>Administrative Law I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                    <tr><td>JIL 205</td><td>Customary Law I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lvl300">
+                            <strong>300 Level</strong>
+                        </button>
+                    </h2>
+                    <div id="lvl300" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
+                        <div class="accordion-body">
+                            <table class="table table-hover table-striped table-sm border">
+                                <thead class="table-dark">
+                                    <tr><th>Code</th><th>Course Title</th><th>Unit</th><th>Status</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>PUL 301</td><td>Criminal Law I</td><td>4</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>PTL 301</td><td>Law of Torts I</td><td>4</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>CCL 301</td><td>Commercial Law I</td><td>4</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>AAUA-LAW 301</td><td>Professional Ethics and Values I</td><td>4</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>CCL 303</td><td>Law of Intellectual Property I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                    <tr><td>JIL 301</td><td>Environmental Law I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                    <tr><td>PTL 303</td><td>Family Law I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                    <tr><td>JIL 303</td><td>Islamic Law I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                    <tr><td>AAUA-LAW 303</td><td>Food and Agricultural Law I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lvl400">
+                            <strong>400 Level</strong>
+                        </button>
+                    </h2>
+                    <div id="lvl400" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
+                        <div class="accordion-body">
+                            <table class="table table-hover table-striped table-sm border">
+                                <thead class="table-dark">
+                                    <tr><th>Code</th><th>Course Title</th><th>Unit</th><th>Status</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>PTL 401</td><td>Land Law I</td><td>4</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>PUL 401</td><td>Law of Evidence I</td><td>4</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>PTL 403</td><td>Principles of Equity</td><td>4</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>CCL 407</td><td>Industrial Law I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                    <tr><td>LAW 415</td><td>Practical Lawyering Skills I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                    <tr><td>JIL 403</td><td>Energy and Natural Resources Law I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                    <tr><td>CCL 405</td><td>Maritime Law I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lvl500">
+                            <strong>500 Level</strong>
+                        </button>
+                    </h2>
+                    <div id="lvl500" class="accordion-collapse collapse" data-bs-parent="#curriculumAccordion">
+                        <div class="accordion-body">
+                            <table class="table table-hover table-striped table-sm border">
+                                <thead class="table-dark">
+                                    <tr><th>Code</th><th>Course Title</th><th>Unit</th><th>Status</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>JIL 501</td><td>Jurisprudence I</td><td>4</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>CCL 501</td><td>Company Law I</td><td>4</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>JIL</td><td>Research Methodology</td><td>2</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>LAW 500</td><td>Research Project</td><td>6</td><td><span class="badge bg-success">C</span></td></tr>
+                                    <tr><td>JIL 503</td><td>Public International Law I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                    <tr><td>PUL 503</td><td>Criminology I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                    <tr><td>JIL 507</td><td>Human Rights I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                    <tr><td>Law 515</td><td>Clinical Law I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                    <tr><td>JIL 511</td><td>Health Law I</td><td>4</td><td><span class="badge bg-warning text-dark">E</span></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="my-5">
+
         <section id="staff" class="mb-5">
             <h2 class="section-title">Academic Staff Directory</h2>
             
@@ -106,60 +246,74 @@
                         <div class="card-body p-4">
                             <span class="badge bg-primary mb-2">DEAN OF FACULTY</span>
                             <h3 class="card-title fw-bold" style="font-family: var(--font-heading);">Professor Olubayo Oluduro</h3>
-                            <p class="text-primary small fw-bold mb-3">
-                                LL.M [Lagos], M.Phil [Ife], MBA [Ado Ekiti], Ph.D [Ghent]<br>
-                                Senior Fellow | Human Rights, Peace and Conflict Studies
-                            </p>
-                            <p class="card-text text-muted">
-                                Professor Oluduro is the Senior Fellow at the OGEES Institute and an Associate Editor of the Institute's Journal. Called to the Nigerian Bar in 1996, he holds a PhD in oil and gas law from Ghent University, Belgium.
-                            </p>
-                            <div class="d-flex gap-2 mt-3">
-                                <a href="https://www.researchgate.net/profile/Olubayo-Oluduro-2" target="_blank" class="btn btn-outline-primary btn-sm">
-                                    <i class="fas fa-book-reader me-2"></i>ResearchGate Profile
-                                </a>
-                            </div>
+                            <p class="text-primary small fw-bold mb-3">LL.M [Lagos], M.Phil [Ife], MBA [Ado Ekiti], Ph.D [Ghent]</p>
+                            <p class="card-text text-muted">Professor Oluduro is a Senior Fellow at the OGEES Institute and an expert in Environmental Law and Human Rights. He oversees interdisciplinary research exploring the intersections between oil exploration, ecological justice, and conflicts in Africa.</p>
+                            <a href="https://www.researchgate.net/profile/Olubayo-Oluduro-2" target="_blank" class="btn btn-outline-primary btn-sm mt-2">
+                                <i class="fas fa-book-reader me-2"></i>ResearchGate Profile
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <h4 class="mb-4 text-primary" style="font-family: var(--font-heading);">Faculty Management & Lecturers</h4>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card staff-card h-100">
-                        <img src="https://source.unsplash.com/400x400/?woman,lawyer,glasses" class="card-img-top staff-img" alt="Lecturer">
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card staff-card h-100 border-primary">
                         <div class="card-body">
-                            <h5 class="card-title">Dr. (Mrs) K. Johnson</h5>
-                            <p class="card-text text-muted small">HOD, Private Law<br>Spec: Family Law</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm w-100">View Profile</a>
+                            <span class="badge bg-warning text-dark mb-2">SUB-DEAN</span>
+                            <h5 class="card-title fw-bold">Mrs. O.O Mohammed</h5>
+                            <p class="text-primary small fw-bold">LL.M, LL.B (Hons)</p>
+                            <hr style="opacity: 0.1;">
+                            <p class="card-text small text-muted">As Sub-Dean, Mrs. Mohammed coordinates student academic affairs. She is a dedicated scholar of <strong>Family Law</strong> and Gender Studies.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+
+                <div class="col-md-6 col-lg-4">
                     <div class="card staff-card h-100">
-                        <img src="https://source.unsplash.com/400x400/?man,glasses,teacher" class="card-img-top staff-img" alt="Lecturer">
                         <div class="card-body">
-                            <h5 class="card-title">Mr. T. Okon, LL.M</h5>
-                            <p class="card-text text-muted small">Faculty Officer<br>Spec: Commercial Law</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm w-100">View Profile</a>
+                            <h5 class="card-title fw-bold">Prof. O. Oke-Samuel</h5>
+                            <p class="text-primary small fw-bold">Professor of Law</p>
+                            <hr style="opacity: 0.1;">
+                            <p class="card-text small text-muted">A distinguished authority on <strong>Environmental Law</strong>. Prof. Oke-Samuel's research focuses on climate change governance and pollution control.</p>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card staff-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Dr. O.T Shemudara</h5>
+                            <p class="text-primary small fw-bold">Senior Lecturer</p>
+                            <hr style="opacity: 0.1;">
+                            <p class="card-text small text-muted">An expert in <strong>Property and Land Law</strong>. Dr. Shemudara brings extensive experience in the Nigerian Land Use Act.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card staff-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Dr. Akin Oluwadayisi</h5>
+                            <p class="text-primary small fw-bold">Senior Lecturer</p>
+                            <hr style="opacity: 0.1;">
+                            <p class="card-text small text-muted">Focuses on <strong>Public Law & Health Law</strong>. Widely published on reproductive health rights.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
         </section>
         
         <hr class="my-5">
 
         <section id="material-bank" class="mb-5">
              <h2 class="section-title">Material Bank & Past Questions</h2>
-             
-             <div class="alert alert-warning border-0 shadow-sm d-flex align-items-center mb-4">
-                <i class="fas fa-exclamation-triangle me-3 fa-2x"></i>
-                <div>
-                    <strong>Important Notice:</strong> Please check these folders weekly for updates. We wish you success in your academic pursuits!
-                </div>
+             <div class="alert alert-warning border-0 shadow-sm mb-4">
+                <strong>Important Notice:</strong> Please check these folders weekly for updates.
              </div>
-
-             <p class="mb-4 text-muted">Access the official Google Drive folders for your level below. These repositories contain lecture notes, handouts, and past examination questions.</p>
 
              <div class="row g-4">
                 <div class="col-md-4">
@@ -167,93 +321,71 @@
                         <div class="card-body">
                             <h3 class="fw-bold text-primary mb-3">100 Level</h3>
                             <div class="d-grid gap-2">
-                                <a href="https://drive.google.com/drive/folders/1016x6xWvWPYJhRSMnJL4teQM5ZZDvCWK" target="_blank" class="btn btn-outline-dark">
-                                    <i class="fab fa-google-drive me-2 text-success"></i>Lecture Materials
-                                </a>
-                                <a href="https://drive.google.com/drive/folders/1KlTCBag_b8VteRpo_YT3PDVdm4wEaOmI" target="_blank" class="btn btn-outline-secondary">
-                                    <i class="fas fa-history me-2"></i>Past Questions
-                                </a>
+                                <a href="https://drive.google.com/drive/folders/1016x6xWvWPYJhRSMnJL4teQM5ZZDvCWK" target="_blank" class="btn btn-outline-dark">Lecture Materials</a>
+                                <a href="https://drive.google.com/drive/folders/1KlTCBag_b8VteRpo_YT3PDVdm4wEaOmI" target="_blank" class="btn btn-outline-secondary">Past Questions</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm text-center p-3">
-                        <div class="card-body">
-                            <h3 class="fw-bold text-primary mb-3">200 Level</h3>
-                            <div class="d-grid gap-2">
-                                <a href="https://drive.google.com/drive/folders/19KppQgwedqd2zPd5cOtlw_FomGUsuo2Z" target="_blank" class="btn btn-outline-dark">
-                                    <i class="fab fa-google-drive me-2 text-success"></i>Lecture Materials
-                                </a>
-                                <a href="https://drive.google.com/drive/folders/1Rp8BP32J2BYCEUI2V-5uvaEPDnLIJibX" target="_blank" class="btn btn-outline-secondary">
-                                    <i class="fas fa-history me-2"></i>Past Questions
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm text-center p-3">
-                        <div class="card-body">
-                            <h3 class="fw-bold text-primary mb-3">300 Level</h3>
-                            <div class="d-grid gap-2">
-                                <a href="https://drive.google.com/drive/folders/1AzEQAe3BIEVESQ9Fee6GjO4jPgf7IV8q" target="_blank" class="btn btn-outline-dark">
-                                    <i class="fab fa-google-drive me-2 text-success"></i>Lecture Materials
-                                </a>
-                                <a href="https://drive.google.com/drive/folders/1WgjqR2dxQWyL10aL3aO0dVVNI1XO-cIn" target="_blank" class="btn btn-outline-secondary">
-                                    <i class="fas fa-history me-2"></i>Past Questions
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="card h-100 border-0 shadow-sm text-center p-3">
-                        <div class="card-body">
-                            <h3 class="fw-bold text-primary mb-3">400 Level</h3>
-                            <div class="d-grid gap-2">
-                                <a href="https://drive.google.com/drive/folders/1ArjHsBaW3wO-nh2MtEXpWQR4PrOLy1Vi" target="_blank" class="btn btn-outline-dark">
-                                    <i class="fab fa-google-drive me-2 text-success"></i>Lecture Materials
-                                </a>
-                                <a href="https://drive.google.com/drive/folders/1F4NHdKaNzvq1GWq1WYWFAYZdB8414k0j" target="_blank" class="btn btn-outline-secondary">
-                                    <i class="fas fa-history me-2"></i>Past Questions
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="card h-100 border-0 shadow-sm text-center p-3">
-                        <div class="card-body">
-                            <h3 class="fw-bold text-primary mb-3">500 Level</h3>
-                            <div class="d-grid gap-2">
-                                <a href="https://drive.google.com/drive/folders/1AZm-DqmmLPZIT8MawotUTpLoJsSeKGnb" target="_blank" class="btn btn-outline-dark">
-                                    <i class="fab fa-google-drive me-2 text-success"></i>Lecture Materials
-                                </a>
-                                <a href="https://drive.google.com/drive/folders/1qz9MM4qKNXPTBCDTlorjznBSj06SXHF8" target="_blank" class="btn btn-outline-secondary">
-                                    <i class="fas fa-history me-2"></i>Past Questions
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-             </div>
         </section>
 
     </div>
-
+    
     <footer>
         <div class="container">
-            <div class="text-center pt-3">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Faculty of Law</h5>
+                    <p>Adekunle Ajasin University,<br>Akungba-Akoko, Ondo State.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="admissions.html">Admission Requirements</a></li>
+                        <li><a href="academics.html#staff">Staff Directory</a></li>
+                        <li><a href="academics.html#material-bank">Material Bank</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Newsletter</h5>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email Address">
+                        <button class="btn btn-warning" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4 border-top border-secondary pt-3">
                 <p class="small">&copy; 2026 Faculty of Law, AAUA.</p>
             </div>
         </div>
     </footer>
 
+    <button id="ai-toggle" class="ai-fab" title="Ask The Legal World">
+        <i class="fas fa-robot"></i>
+    </button>
+
+    <div id="ai-container" class="ai-card">
+        <div class="ai-header">
+            <div class="d-flex align-items-center">
+                <div class="ai-avatar me-2"><i class="fas fa-balance-scale"></i></div>
+                <div><h6 class="mb-0 fw-bold">The Legal World</h6><small class="text-white-50" style="font-size: 0.7rem;">Powered by Groq AI</small></div>
+            </div>
+            <button id="ai-close" class="btn btn-sm text-white"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="ai-messages" class="ai-body">
+            <div class="ai-msg bot">
+                <p>Hello! I am <strong>The Legal World</strong>.</p>
+                <p>I can cite Nigerian Statutes and answer questions about the AAUA Law Faculty. How may I assist?</p>
+            </div>
+        </div>
+        <div class="ai-footer">
+            <input type="text" id="ai-input" placeholder="Ask a law question..." autocomplete="off">
+            <button id="ai-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

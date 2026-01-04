@@ -3,28 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akungba Law Clinic | AAUA</title>
-    
+    <title>Law Clinic - Faculty of Law | AAUA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="top-bar">
         <div class="container d-flex justify-content-between">
-            <span><i class="fas fa-hand-holding-heart me-2"></i>Free Legal Services for the Community</span>
-            <span><i class="fas fa-phone me-2"></i>+234 800 CLINIC</span>
+            <span><i class="fas fa-envelope me-2"></i>info@law.aaua.edu.ng</span>
+            <span><i class="fas fa-phone me-2"></i>+234 800 123 4567</span>
         </div>
     </div>
 
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="fas fa-balance-scale me-2"></i>AAUA LAW
-            </a>
+            <a class="navbar-brand" href="index.html"><i class="fas fa-balance-scale me-2"></i>AAUA LAW</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,166 +28,199 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="academics.html">Academics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="student-life.html">Students (LSS)</a></li>
+                    <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
                     <li class="nav-item"><a class="nav-link active" href="law-clinic.html">Law Clinic</a></li>
                     <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-2" href="#">Portal Login</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-primary ms-2" href="https://avers.aaua.edu.ng" target="_blank">Portal Login</a></li>
+                    
+                    <li class="nav-item theme-toggle-wrapper">
+                        <button class="theme-btn" id="themeToggle" title="Toggle Dark Mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="clinic-hero">
-        <div class="container text-center">
-            <span class="clinic-badge mb-3 d-inline-block">Pro Bono Publico</span>
-            <h1 class="display-4 fw-bold">Akungba Law Clinic</h1>
-            <p class="lead w-75 mx-auto">Bridging the gap between the law and the people. We provide free legal support, mediation, and counseling to the Akungba-Akoko community.</p>
-            <div class="mt-4">
-                <a href="#get-help" class="btn btn-warning btn-lg me-2">Get Legal Help</a>
-                <a href="#volunteer" class="btn btn-outline-light btn-lg">For Students</a>
-            </div>
+    <header class="page-header" style="background-image: url('https://source.unsplash.com/1600x900/?meeting,advocacy');">
+        <div class="container">
+            <h1>AAUA Law Clinic</h1>
+            <p class="lead">Bridging the Gap Between Theory and Practice</p>
+            <span class="badge bg-warning text-dark mt-2 p-2">Community Service • Pro Bono • Justice</span>
         </div>
     </header>
 
     <div class="container py-5">
-        <div class="row align-items-center mb-5">
-            <div class="col-lg-6">
-                <h2 class="section-title">Clinical Legal Education</h2>
-                <p>The Akungba Law Clinic is not just a service center; it is a training ground. Under the strict supervision of experienced faculty staff and practicing attorneys, our law students apply legal theory to real-life problems.</p>
-                <p>We believe in <strong>Social Justice</strong> and <strong>Access to Law</strong> for the indigent and vulnerable members of society.</p>
-                <ul class="list-unstyled mt-3">
-                    <li><i class="fas fa-check-circle text-primary me-2"></i>Confidentiality Guaranteed</li>
-                    <li><i class="fas fa-check-circle text-primary me-2"></i>Alternative Dispute Resolution (ADR)</li>
-                    <li><i class="fas fa-check-circle text-primary me-2"></i>Human Rights Advocacy</li>
-                </ul>
+        
+        <section class="mb-5 text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="section-title">Our Mission</h2>
+                    <p class="text-muted lead">
+                        The AAUA Law Clinic provides free legal services to the indigent members of the Akungba-Akoko community while offering law students hands-on experience in client interviewing, counseling, and legal drafting.
+                    </p>
+                </div>
             </div>
-            <div class="col-lg-6">
-                <img src="https://source.unsplash.com/600x400/?advocacy,hands" class="img-fluid rounded shadow" alt="Community Service">
-            </div>
-        </div>
+        </section>
 
-        <h2 class="text-center section-title mb-5">Our Practice Areas</h2>
-        <div class="row g-4 text-center">
-            <div class="col-md-4">
-                <div class="service-box">
-                    <i class="fas fa-handshake service-icon"></i>
-                    <h4>Mediation & ADR</h4>
-                    <p class="text-muted">We help resolve disputes between landlords/tenants, small businesses, and families without going to court.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-box">
-                    <i class="fas fa-balance-scale-right service-icon"></i>
-                    <h4>Human Rights</h4>
-                    <p class="text-muted">Defense and advisory for individuals whose fundamental rights have been infringed upon.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="service-box">
-                    <i class="fas fa-gavel service-icon"></i>
-                    <h4>Legal Awareness</h4>
-                    <p class="text-muted">Community sensitization programs on the rights of citizens and the Nigerian Constitution.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+        <hr class="my-5">
 
-    <section id="volunteer" class="volunteer-section py-5">
-        <div class="container">
-            <div class="row">
+        <section id="management" class="mb-5">
+            <h2 class="section-title text-center">Clinic Management</h2>
+            <div class="row justify-content-center g-4">
+                
+                <div class="col-md-6 col-lg-5">
+                    <div class="card staff-card h-100 p-4 text-center" style="border-top: 4px solid var(--primary-blue);">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-user-tie fa-4x" style="color: var(--primary-blue);"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">[Name Required]</h4>
+                            <span class="badge bg-primary mb-3">GENERAL MANAGER</span>
+                            <p class="card-text text-muted">Responsible for the overall administration, strategic direction, and external partnerships of the Law Clinic.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-5">
+                    <div class="card staff-card h-100 p-4 text-center" style="border-top: 4px solid var(--accent-gold);">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-clipboard-list fa-4x" style="color: var(--accent-gold);"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">[Name Required]</h4>
+                            <span class="badge bg-warning text-dark mb-3">ADMINISTRATIVE MANAGER</span>
+                            <p class="card-text text-muted">Oversees daily operations, case file management, student scheduling, and clinic logistics.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="units" class="mb-5">
+            <h2 class="section-title">Operational Units & Heads</h2>
+            <p class="text-muted mb-4">Our clinic acts through specialized units, each headed by a student leader.</p>
+            
+            <div class="row g-4">
+                
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card text-start">
+                        <i class="fas fa-gavel feature-icon mb-2"></i>
+                        <h5 class="fw-bold">Litigation & Support</h5>
+                        <p class="small text-muted mb-3">Handles court observation, drafting of processes, and case support.</p>
+                        <hr class="w-100">
+                        <span class="badge bg-light text-dark border">HEAD OF UNIT</span>
+                        <h6 class="fw-bold mt-2 mb-0">[Name Required]</h6>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card text-start">
+                        <i class="fas fa-hands-helping feature-icon mb-2"></i>
+                        <h5 class="fw-bold">Human Rights Unit</h5>
+                        <p class="small text-muted mb-3">Focuses on rights enforcement, prison visits, and pro bono advocacy.</p>
+                        <hr class="w-100">
+                        <span class="badge bg-light text-dark border">HEAD OF UNIT</span>
+                        <h6 class="fw-bold mt-2 mb-0">[Name Required]</h6>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card text-start">
+                        <i class="fas fa-info-circle feature-icon mb-2"></i>
+                        <h5 class="fw-bold">Freedom of Information</h5>
+                        <p class="small text-muted mb-3">Promotes transparency and assists citizens in accessing public records.</p>
+                        <hr class="w-100">
+                        <span class="badge bg-light text-dark border">HEAD OF UNIT</span>
+                        <h6 class="fw-bold mt-2 mb-0">[Name Required]</h6>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card text-start">
+                        <i class="fas fa-leaf feature-icon mb-2"></i>
+                        <h5 class="fw-bold">Environmental Law</h5>
+                        <p class="small text-muted mb-3">Addresses ecological disputes and promotes environmental justice.</p>
+                        <hr class="w-100">
+                        <span class="badge bg-light text-dark border">HEAD OF UNIT</span>
+                        <h6 class="fw-bold mt-2 mb-0">[Name Required]</h6>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card text-start">
+                        <i class="fas fa-handshake feature-icon mb-2"></i>
+                        <h5 class="fw-bold">Dispute Resolution (ADR)</h5>
+                        <p class="small text-muted mb-3">Facilitates mediation and negotiation for amicable conflict settlement.</p>
+                        <hr class="w-100">
+                        <span class="badge bg-light text-dark border">HEAD OF UNIT</span>
+                        <h6 class="fw-bold mt-2 mb-0">[Name Required]</h6>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 feature-card text-start">
+                        <i class="fas fa-child feature-icon mb-2"></i>
+                        <h5 class="fw-bold">Women & Child Rights</h5>
+                        <p class="small text-muted mb-3">Dedicated to the protection of vulnerable groups and domestic cases.</p>
+                        <hr class="w-100">
+                        <span class="badge bg-light text-dark border">HEAD OF UNIT</span>
+                        <h6 class="fw-bold mt-2 mb-0">[Name Required]</h6>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="card bg-light p-5 border-0">
+            <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h3><i class="fas fa-graduation-cap me-2"></i>Become a Student Clinician</h3>
-                    <p>Are you a Law Student in 300L, 400L, or 500L? Join the clinic to gain practical interviewing, counseling, and drafting skills.</p>
-                    <p><strong>Requirements:</strong></p>
-                    <ul>
-                        <li>Must be in good academic standing (CGPA 3.0+).</li>
-                        <li>Must pass the Ethics & Professional Responsibility interview.</li>
-                        <li>Commitment of 5 hours per week.</li>
-                    </ul>
+                    <h3>Need Legal Assistance?</h3>
+                    <p class="mb-0">The Law Clinic is open Monday to Friday, 10:00 AM - 2:00 PM. All services are free.</p>
                 </div>
-                <div class="col-md-4 text-center d-flex align-items-center justify-content-center">
-                    <button class="btn btn-primary btn-lg">Apply to Join</button>
+                <div class="col-md-4 text-end">
+                    <a href="#" class="btn btn-primary btn-lg">Book Appointment</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div id="get-help" class="container py-5 my-4">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card border-0 shadow-lg">
-                    <div class="card-header bg-primary text-white text-center py-3">
-                        <h4 class="mb-0 text-white">Request Legal Assistance</h4>
-                    </div>
-                    <div class="card-body p-5">
-                        <p class="text-center text-muted mb-4">Please fill out this form briefly describing your issue. A supervisor will review it and contact you.</p>
-                        <form>
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" placeholder="Your Name">
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label">Phone Number</label>
-                                    <input type="tel" class="form-control" placeholder="080...">
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Type of Issue</label>
-                                <select class="form-select">
-                                    <option selected>Select an option...</option>
-                                    <option>Tenancy / Housing</option>
-                                    <option>Family / Domestic</option>
-                                    <option>Employment / Labour</option>
-                                    <option>Human Rights Violation</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Brief Description</label>
-                                <textarea class="form-control" rows="4" placeholder="Describe what happened..."></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-warning w-100 fw-bold">Submit Request</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5>Faculty of Law</h5>
-                    <p>Adekunle Ajasin University,<br>Akungba-Akoko, Ondo State.</p>
-                    <p><i class="fas fa-phone me-2"></i> +234 800 123 4567</p>
-                    <p><i class="fas fa-envelope me-2"></i> info@law.aaua.edu.ng</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="admissions.html">Admission Requirements</a></li>
-                        <li><a href="academics.html#staff">Staff Directory</a></li>
-                        <li><a href="law-clinic.html">Law Clinic</a></li>
-                        <li><a href="student-life.html">Student Handbook</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Newsletter</h5>
-                    <p>Subscribe for updates on Faculty news and Legal Journals.</p>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Email Address">
-                        <button class="btn btn-warning" type="button">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4 border-top border-secondary pt-3">
-                <p class="small">&copy; 2026 Faculty of Law, AAUA. All Rights Reserved. | Akungba Law Clinic.</p>
+            <div class="text-center pt-3">
+                <p class="small">&copy; 2026 Faculty of Law, AAUA.</p>
             </div>
         </div>
     </footer>
 
+    <button id="ai-toggle" class="ai-fab" title="Ask The Legal World">
+        <i class="fas fa-robot"></i>
+    </button>
+
+    <div id="ai-container" class="ai-card">
+        <div class="ai-header">
+            <div class="d-flex align-items-center">
+                <div class="ai-avatar me-2"><i class="fas fa-balance-scale"></i></div>
+                <div><h6 class="mb-0 fw-bold">The Legal World</h6><small class="text-white-50" style="font-size: 0.7rem;">Powered by Groq AI</small></div>
+            </div>
+            <button id="ai-close" class="btn btn-sm text-white"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="ai-messages" class="ai-body">
+            <div class="ai-msg bot">
+                <p>Hello! I am <strong>The Legal World</strong>.</p>
+                <p>How can I assist you with legal clinic inquiries today?</p>
+            </div>
+        </div>
+        <div class="ai-footer">
+            <input type="text" id="ai-input" placeholder="Ask a question..." autocomplete="off">
+            <button id="ai-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
