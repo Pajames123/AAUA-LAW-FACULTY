@@ -1,21 +1,26 @@
 // api/legal-ai.js
 export default async function handler(req, res) {
-    // 1. Only allow POST requests
+    // 1. Only allow POST requests for security
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
     const { message, systemPrompt } = req.body;
 
-    // 2. Safety check for the API Key
+    // 2. Validate input
+    if (!message) {
+        return res.status(400).json({ error: 'Message is required' });
+    }
+
+    // 3. Safety check for the API Key in Vercel Environment Variables
     const apiKey = process.env.AAUA_LAW;
     if (!apiKey) {
         console.error("Vercel Error: AAUA_LAW variable not found in environment.");
-        return res.status(500).json({ error: "Server configuration error." });
+        return res.status(500).json({ error: "Server configuration error: Missing API Key." });
     }
 
     try {
-        // 3. The Server (Vercel) talks to Groq
+        // 4. The Server (Vercel) communicates with the Groq API
         const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
             method: "POST",
             headers: {
@@ -23,13 +28,14 @@ export default async function handler(req, res) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                model: "llama3-8b-8192",
+                // UPDATED: Switching to a supported, high-performance model
+                model: "llama-3.3-70b-versatile", 
                 messages: [
                     { role: "system", content: systemPrompt },
                     { role: "user", content: message }
                 ],
                 temperature: 0.6,
-                max_tokens: 500,
+                max_tokens: 800, // Increased slightly for more detailed legal analysis
             }),
         });
 
@@ -37,10 +43,12 @@ export default async function handler(req, res) {
 
         if (!response.ok) {
             console.error("Groq reported an error:", data);
-            return res.status(response.status).json({ error: data.error?.message || "Groq Error" });
+            return res.status(response.status).json({ 
+                error: data.error?.message || "Groq Error" 
+            });
         }
 
-        // 4. Send the answer back to your website
+        // 5. Send the successful AI response back to the website frontend
         res.status(200).json(data);
 
     } catch (error) {

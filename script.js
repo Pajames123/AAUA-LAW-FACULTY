@@ -52,7 +52,7 @@ if (aiToggle) {
 
     async function getGroqResponse(userMessage) {
         try {
-            // ✅ IMPORTANT: We call our OWN API, not Groq directly
+            // Points to your secure Vercel Serverless Function
             const response = await fetch("/api/legal-ai", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -63,19 +63,25 @@ if (aiToggle) {
             });
 
             const data = await response.json();
-            if (!response.ok) throw new Error(data.error || "Server Error");
+            
+            if (!response.ok) {
+                // This catches model decommission errors or key errors from the backend
+                throw new Error(data.error || `Error ${response.status}`);
+            }
 
             return data.choices[0].message.content;
 
         } catch (error) {
-            console.error("AI Error:", error);
-            return "My learned colleague, I am unable to reach the server. Please ensure the AAUA_LAW key is set in Vercel.";
+            console.error("AI Error Details:", error);
+            // Friendly error for the UI
+            return `My learned colleague, I encountered a technical hurdle: ${error.message}. Please ensure the AAUA_LAW key is active and the model name is current in the API file.`;
         }
     }
 
     function addMessage(text, sender) {
         const div = document.createElement('div');
         div.classList.add('ai-msg', sender);
+        // Formats bold text and line breaks for a professional look
         div.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
         aiMessages.appendChild(div);
         aiMessages.scrollTop = aiMessages.scrollHeight;
@@ -92,7 +98,7 @@ if (aiToggle) {
         const loadingDiv = document.createElement('div');
         loadingDiv.classList.add('ai-msg', 'bot');
         loadingDiv.id = loadingId;
-        loadingDiv.innerHTML = `<i class="fas fa-balance-scale fa-spin me-2"></i> Consulting...`;
+        loadingDiv.innerHTML = `<i class="fas fa-balance-scale fa-spin me-2"></i> Consulting Authorities...`;
         aiMessages.appendChild(loadingDiv);
         aiMessages.scrollTop = aiMessages.scrollHeight;
 
