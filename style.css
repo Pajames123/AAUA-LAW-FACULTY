@@ -2,27 +2,37 @@
    1. PREMIUM VARIABLES & RESET
    ========================================= */
 :root {
-    /* Refined Color Palette */
-    --primary-blue: #0A1F32;  /* Darker, richer Navy (almost black-blue) */
-    --secondary-blue: #1B3B5A; /* Lighter Navy for gradients/hovers */
-    --accent-gold: #C5A059;    /* Muted Metallic Gold (Classy, not yellow) */
-    --text-dark: #2C2C2C;      /* Soft Charcoal for text */
-    --text-light: #666666;     /* Grey for subtitles */
-    --light-bg: #F9F9F9;       /* Very light grey (Paper feel) */
+    /* LUXURY COLOR PALETTE */
+    --primary-blue: #0A1F32;   /* Deepest Navy (Almost Black) */
+    --secondary-blue: #1B3B5A; /* Lighter Navy for hovers */
+    --accent-gold: #C5A059;    /* Muted Metallic Gold (Legal Standard) */
+    
+    /* NEUTRALS */
+    --text-dark: #2C2C2C;      /* Soft Charcoal */
+    --text-light: #555555;     /* Readable Grey */
+    --light-bg: #F9F9F9;       /* Paper White */
     --white: #FFFFFF;
-    --clinic-green: #2E8B57;
+    
+    /* TYPOGRAPHY SYSTEM */
+    /* Headings: Authoritative Serif */
+    --font-heading: 'Playfair Display', 'Merriweather', serif;
+    /* Body: Clean Sans-Serif */
+    --font-body: 'Open Sans', 'Roboto', sans-serif;
 }
 
+/* Base Settings */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-body);
     color: var(--text-dark);
-    line-height: 1.6; /* improved readability */
+    line-height: 1.7; /* High readability */
+    font-weight: 400;
     background-color: var(--white);
+    overflow-x: hidden;
 }
 
-/* Typography Authority */
-h1, h2, h3, h4, .navbar-brand, .display-4, .section-title {
-    font-family: 'Playfair Display', serif;
+/* Typography Authority - "The Legal Look" */
+h1, h2, h3, h4, .navbar-brand, .display-4, .section-title, blockquote {
+    font-family: var(--font-heading);
     color: var(--primary-blue);
     font-weight: 700;
 }
@@ -41,12 +51,13 @@ a {
     font-size: 0.85rem;
     padding: 8px 0;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-family: var(--font-body);
 }
 
 .navbar {
     background: var(--white);
-    padding: 15px 0; /* Taller navbar feels more premium */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Soft shadow */
+    padding: 15px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Soft, expensive shadow */
 }
 
 .navbar-brand {
@@ -56,23 +67,24 @@ a {
 }
 
 .nav-link {
+    font-family: var(--font-body);
     color: var(--secondary-blue) !important;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     margin-left: 15px;
+    text-transform: uppercase;
     letter-spacing: 0.5px;
-    text-transform: uppercase; /* Professional touch */
 }
 
 .nav-link:hover, .nav-link.active {
     color: var(--accent-gold) !important;
 }
 
-/* Button Styling Override for Navbar */
+/* Login Button Styling */
 .btn-outline-primary {
     border-color: var(--primary-blue);
     color: var(--primary-blue);
-    border-radius: 2px; /* Sharp corners look more formal */
+    border-radius: 2px; /* Sharp, professional corners */
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 1px;
@@ -86,23 +98,31 @@ a {
 /* =========================================
    3. HERO SECTIONS (Immersive)
    ========================================= */
-.hero, .clinic-hero, header.page-header-life {
-    /* Darker overlay for better text contrast */
+.hero, .clinic-hero, header.page-header-life, .page-header {
     background-blend-mode: multiply;
-    background-color: rgba(10, 31, 50, 0.85); 
+    background-color: rgba(10, 31, 50, 0.85); /* Dark blue overlay */
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 140px 0 100px; /* Taller hero section */
+    padding: 140px 0 100px;
     text-align: center;
 }
 
 /* Homepage Background */
 .hero { background-image: url('https://source.unsplash.com/1600x900/?courthouse,library'); }
+
 /* Student Life Background */
 header.page-header-life { background-image: url('https://source.unsplash.com/1600x900/?university,graduation'); }
+
 /* Clinic Background */
 .clinic-hero { background-image: url('https://source.unsplash.com/1600x900/?meeting,lawyer'); }
+
+/* Standard Page Header (Academics/Admissions) */
+.page-header {
+    background-color: var(--primary-blue); /* Solid color fallback */
+    padding: 80px 0;
+    border-bottom: 4px solid var(--accent-gold);
+}
 
 .hero h1, .clinic-hero h1, .page-header h1, .page-header-life h1 {
     font-size: 3.5rem;
@@ -110,74 +130,35 @@ header.page-header-life { background-image: url('https://source.unsplash.com/160
     letter-spacing: -1px;
 }
 
-.hero .lead {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 1.25rem;
+.lead {
+    font-family: var(--font-heading); /* Serif font for intros */
+    font-weight: 400;
+    font-style: italic;
     opacity: 0.9;
-    margin-bottom: 2rem;
-}
-
-/* Standard Page Header (Academics/Admissions) */
-.page-header {
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 80px 0;
-    text-align: center;
-    border-bottom: 4px solid var(--accent-gold);
+    font-size: 1.3rem;
 }
 
 /* =========================================
    4. COMPONENTS & CARDS
    ========================================= */
-/* Gold Divider/Ticker */
+/* Gold News Ticker */
 .news-ticker {
     background-color: var(--accent-gold);
     color: var(--primary-blue);
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-body);
     font-weight: 700;
     font-size: 0.9rem;
     padding: 12px 0;
     letter-spacing: 0.5px;
 }
 
-/* Feature/Quick Link Cards */
-.feature-card {
-    border: 1px solid #eee;
-    background: var(--white);
-    padding: 2rem;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    border-bottom: 3px solid var(--accent-gold); /* Subtle gold reveal */
-}
-
-.feature-icon {
-    font-size: 2.2rem;
-    color: var(--accent-gold); /* Gold icons look more premium than blue */
-    margin-bottom: 20px;
-}
-
-.feature-card h5 {
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
-    margin-bottom: 10px;
-}
-
 /* Section Titles */
 .section-title {
     position: relative;
     padding-bottom: 15px;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
+    margin-bottom: 30px;
+    font-size: 2rem;
 }
-
 .section-title::after {
     content: '';
     position: absolute;
@@ -188,110 +169,31 @@ header.page-header-life { background-image: url('https://source.unsplash.com/160
     background-color: var(--accent-gold);
 }
 
+/* Feature/Quick Link Cards */
+.feature-card {
+    border: 1px solid #eee;
+    background: var(--white);
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-bottom: 3px solid var(--accent-gold);
+}
+.feature-icon {
+    font-size: 2.2rem;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
 /* Dean's Image Styling */
 .dean-img {
     border-radius: 2px;
-    box-shadow: 20px 20px 0px rgba(197, 160, 89, 0.2); /* Offset gold shadow */
+    box-shadow: 15px 15px 0px rgba(197, 160, 89, 0.2); /* Gold offset shadow */
     width: 100%;
     height: auto;
-}
-
-/* =========================================
-   5. PAGE SPECIFIC (Academics, Life, Etc)
-   ========================================= */
-/* Staff Cards */
-.staff-card {
-    border: none;
-    border-radius: 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-.staff-card .card-body {
-    border-bottom: 3px solid transparent;
-    transition: 0.3s;
-}
-.staff-card:hover .card-body {
-    border-bottom: 3px solid var(--accent-gold);
-}
-.staff-img { height: 280px; object-fit: cover; object-position: top; }
-
-/* Student Life Execs */
-.exec-card {
-    background: var(--white);
-    border: 1px solid #f0f0f0;
-    padding: 40px 20px;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-.exec-card:hover {
-    border-color: var(--accent-gold);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-}
-.exec-img {
-    width: 130px; height: 130px;
-    border: 3px solid var(--accent-gold);
-    padding: 3px; /* Creates a double border effect */
-}
-
-/* Chambers */
-.chamber-card {
-    background: var(--light-bg);
-    border-left: 4px solid var(--primary-blue);
-    border-radius: 0 4px 4px 0;
-    padding: 2rem;
-}
-
-/* Admissions & Notices */
-.portal-notice {
-    background-color: #fff9e6; /* Very light gold */
-    border-left: 4px solid var(--accent-gold);
-    color: var(--primary-blue);
-}
-.nav-tabs .nav-link { border: none; font-weight: 600; color: var(--text-light); }
-.nav-tabs .nav-link.active {
-    color: var(--primary-blue);
-    border-bottom: 3px solid var(--primary-blue);
-    background: transparent;
-}
-
-/* Law Clinic */
-.clinic-badge {
-    background-color: var(--accent-gold);
-    color: var(--primary-blue);
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    padding: 8px 16px;
-    border-radius: 0; /* Square badges look more serious */
-}
-.service-box {
-    border-top: 4px solid var(--accent-gold); /* Gold top border */
-    border-bottom: none;
-}
-
-/* =========================================
-   6. FOOTER (Dark & Executive)
-   ========================================= */
-footer {
-    background-color: #05101A; /* Even darker than primary blue */
-    color: rgba(255,255,255,0.7);
-    padding: 70px 0 30px;
-    border-top: 5px solid var(--accent-gold);
-}
-
-footer h5 {
-    color: var(--white);
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-}
-
-footer a {
-    color: rgba(255,255,255,0.6);
-    transition: 0.3s;
-}
-
-footer a:hover {
-    color: var(--accent-gold);
-    padding-left: 5px; /* Subtle movement on hover */
 }
 
 /* Buttons (Global Upgrade) */
@@ -307,7 +209,6 @@ footer a:hover {
     background-color: var(--secondary-blue);
     border-color: var(--secondary-blue);
 }
-
 .btn-warning {
     background-color: var(--accent-gold);
     border-color: var(--accent-gold);
@@ -316,6 +217,127 @@ footer a:hover {
     border-radius: 2px;
 }
 .btn-warning:hover {
-    background-color: #b38f45; /* Darker gold */
+    background-color: #b38f45;
     color: white;
+}
+
+/* =========================================
+   5. PAGE SPECIFIC STYLES
+   ========================================= */
+/* Academics: Staff Cards */
+.staff-card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.staff-card .card-body {
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+.staff-card:hover .card-body {
+    border-bottom: 3px solid var(--accent-gold);
+}
+.staff-img { height: 280px; object-fit: cover; object-position: top; }
+
+/* Student Life: Executives */
+.exec-card {
+    background: var(--white);
+    border: 1px solid #f0f0f0;
+    padding: 40px 20px;
+    border-radius: 4px;
+    transition: 0.3s;
+    text-align: center;
+}
+.exec-card:hover {
+    border-color: var(--accent-gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.exec-img {
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-gold);
+    padding: 3px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Student Life: Chambers */
+.chamber-card {
+    background: var(--light-bg);
+    border: none;
+    border-left: 4px solid var(--primary-blue);
+    border-radius: 0 4px 4px 0;
+    padding: 2rem;
+    transition: 0.3s;
+}
+.chamber-card:hover {
+    background: var(--white);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Admissions Notices */
+.portal-notice {
+    background-color: #fff9e6; /* Light gold background */
+    border-left: 4px solid var(--accent-gold);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.nav-tabs .nav-link { color: var(--text-light); border: none; font-weight: 600; }
+.nav-tabs .nav-link.active {
+    color: var(--primary-blue);
+    border-bottom: 3px solid var(--primary-blue);
+    background: transparent;
+}
+
+/* Law Clinic */
+.clinic-badge {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    padding: 8px 16px;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.service-box {
+    background: white;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--accent-gold);
+    height: 100%;
+    transition: transform 0.3s;
+}
+.service-box:hover { transform: translateY(-5px); }
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   6. FOOTER (Dark & Executive)
+   ========================================= */
+footer {
+    background-color: #05101A; /* Darker than primary */
+    color: rgba(255,255,255,0.7);
+    padding: 70px 0 30px;
+    border-top: 5px solid var(--accent-gold);
+    font-family: var(--font-body);
+}
+
+footer h5 {
+    color: var(--white);
+    font-family: var(--font-heading);
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+footer a {
+    color: rgba(255,255,255,0.6);
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: var(--accent-gold);
+    padding-left: 5px; /* Subtle slide effect */
 }
